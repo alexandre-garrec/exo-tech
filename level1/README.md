@@ -10,5 +10,6 @@ The customer is charged the sum of the prices of each article in their cart.
 Prices are expressed in cents.
 
 INSTRUCTIONS :
+*  Setup typescript project
 *  `node index.js` should generate a new file `output.json`
 *  `output.json` must be equal to `expected_output.json`
