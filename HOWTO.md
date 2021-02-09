@@ -26,8 +26,10 @@ This test aims to evaluate the following candidate skills :
 
 - code should be clean (Latest ECMA syntax, safe Typescript, layer separation)
 - tests should be present (Show your best skills : TDD, unit, integration and more)
-- synchronous IO should not be used (ex: use fs.readdir not fs.readdirSync)
-- it must run in a MacOS and Linux environment, assume that only npm and node LTS are already installed
+- use asynchronous IO only :
+    - `fs.xxxxxSync` should not be used
+    - `import data from 'xxxx.json'` should not be used
+- it must run in a MacOS and Linux environment, assume that only `npm`, `yarn` and `node` LTS are already installed
 - documentation files should be added
 - comments in code could be added when you need to clarify a design decision or assumptions about the spec
 
@@ -36,7 +38,7 @@ This test aims to evaluate the following candidate skills :
 
 - [duplicate](https://help.github.com/articles/duplicating-a-repository/) this repository (do **not** fork it)
 - solve the levels in ascending order
-- commit often and atomically to show the evolution of the code step by step
+- **commit often and atomically** to show the evolution of the code step by step
 
 When finished, provide a link to your repository
 
