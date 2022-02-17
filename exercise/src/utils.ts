@@ -1,5 +1,5 @@
 import { Article, ArticleById } from './interface/Article';
-import { Discount, DiscountByArticleId } from './interface/Discount';
+import { Discount, DiscountByArticleId, TYPE_AMOUNT, TYPE_PERCENTAGE } from './interface/Discount';
 import { DeliveryFee } from './interface/DeliveryFee';
 import { Cart } from './interface/Cart';
 
@@ -39,9 +39,9 @@ export function getArticlePriceSum(cart: Cart, articleById: ArticleById, discoun
     const { type, value } = discountByArticleId[`${article_id}`];
 
     switch (type) {
-      case 'amount':
+      case TYPE_AMOUNT:
         return memo + (articlePrice - value) * quantity;
-      case 'percentage':
+      case TYPE_PERCENTAGE:
         return memo + Math.floor(articlePrice - articlePrice * (value / 100)) * quantity;
     }
   }, 0);
