@@ -3,3 +3,7 @@ export interface Discount {
   type: 'amount' | 'percentage';
   value: number;
 }
+
+export interface DiscountByArticleId {
+  [key: string]: Discount;
+}

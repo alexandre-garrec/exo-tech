@@ -3,6 +3,11 @@ export interface Cart {
   items: Array<CartItem>;
 }
 
+export interface UserCart {
+  id: string;
+  total: number;
+}
+
 export interface CartItem {
   article_id: string;
   quantity: number;
