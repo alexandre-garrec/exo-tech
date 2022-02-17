@@ -24,6 +24,8 @@ async function main() {
     } as UserCart;
   });
 
+  console.log(expect);
+
   writeFile(expect);
 }
 

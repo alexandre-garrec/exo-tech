@@ -9,10 +9,6 @@ export function isBetween(a: number, b: number, val: number = Math.max()): boole
   return val >= min && val < max;
 }
 
-// export function twoDecimal(num: number) {
-//   return Math.round(num * 100) / 100;
-// }
-
 export function sortDiscountByArticleId(discounts: Array<Discount>): DiscountByArticleId {
   return discounts.reduce((memo, discont) => {
     return { ...memo, [discont.article_id]: discont };
@@ -46,7 +42,7 @@ export function getArticlePriceSum(cart: Cart, articleById: ArticleById, discoun
       case 'amount':
         return memo + (articlePrice - value) * quantity;
       case 'percentage':
-        return memo + Math.round(articlePrice - articlePrice * (value / 100)) * quantity;
+        return memo + Math.floor(articlePrice - articlePrice * (value / 100)) * quantity;
     }
   }, 0);
 }
