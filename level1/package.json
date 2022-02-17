@@ -3,11 +3,22 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "engines" : { 
-    "node" : ">=8.0.0" 
+  "engines": {
+    "node": ">=8.0.0"
   },
   "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "run:serv": "json-server --watch input.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:integration": "rm -f output.json && node index && diff expected_output.json output.json && echo 'Test passed!'"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "@types/node-fetch": "^2.6.1",
+    "ts-node": "^10.5.0"
   }
 }
